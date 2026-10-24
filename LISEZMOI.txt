@@ -1,0 +1,115 @@
+INDEXER PHOTOS
+Mots-clés automatiques pour vos photos, par une IA qui tourne sur votre Mac
+═══════════════════════════════════════════════════════════════════════════
+
+Ce que ça fait
+──────────────
+Une IA (via Ollama) regarde chaque photo et écrit 6 à 10 mots-clés
+en français et une courte description dans ses métadonnées (IPTC / XMP).
+Lightroom, Bridge et Capture One les lisent directement.
+
+  • 100 % local : aucune image ne quitte votre Mac, aucun abonnement.
+  • JPG, TIFF, DNG : mots-clés écrits DANS le fichier.
+  • RAW (NEF, CR2, CR3, ARW, RAF, ORF, RW2) : fichier .xmp créé à côté,
+    comme le fait Lightroom. Le RAW lui-même n'est jamais modifié.
+  • Les mots-clés existants sont conservés, sans doublon.
+    Une légende existante n'est jamais remplacée.
+  • Interruption possible à tout moment : relancer le même dossier
+    reprend là où on s'était arrêté.
+  • Un filtre nettoie les mots-clés (vêtements ordinaires, mots anglais,
+    datations devinées, mots-clés mal formés) quel que soit le modèle.
+
+
+Configuration requise
+─────────────────────
+  • Mac Apple Silicon (M1 ou plus récent). Sur Intel : possible mais très lent.
+  • Connexion internet pendant l'installation.
+  • L'installateur choisit le mode selon la mémoire du Mac :
+
+    Mémoire       Mode       Modèle                 Qualité        Vitesse mesurée*
+    32 Go et +    standard   gemma4:26b (18 Go)     très bonne     ~1 s / image
+    16 à 31 Go    léger      qwen3-vl:8b (6 Go)     bonne**        ~3,5 s / image
+    moins de 16   déconseillé
+
+    *  mode standard : Mac Studio M4 Max. Mode léger : ~3,5 s sur Mac Studio,
+       mais ~11 s sur un MacBook Pro 16 Go (environ 30 h pour 10 000 images).
+       Le mode léger convient aux séries de quelques centaines d'images ;
+       pour une grosse archive, lancez-le la nuit ou préférez un Mac de 32 Go.
+    ** quelques erreurs sur 20 images de test (ex. « neige » pour de la brume).
+
+  • Espace disque libre : 30 Go en mode standard, 15 Go en mode léger.
+
+
+Installation (10 à 30 minutes)
+──────────────────────────────
+1. Décompressez le kit et laissez tous les fichiers ensemble.
+2. Ouvrez l'application Terminal (Applications > Utilitaires > Terminal).
+3. Tapez  bash  suivi d'un espace, puis glissez le fichier
+   « Installer Indexer photos.command » dans la fenêtre du Terminal.
+   Appuyez sur Entrée.
+   Si l'installateur indique que « macOS empêche le Terminal de lire »
+   (cas fréquent quand le kit est dans Téléchargements) :
+   Réglages Système > Confidentialité et sécurité > Accès complet au disque,
+   activez « Terminal », quittez-le (⌘Q), rouvrez-le et relancez.
+   Cette autorisation sert aussi plus tard à lire vos dossiers de photos.
+4. Suivez les questions. Votre mot de passe de session peut être demandé
+   pour Homebrew : rien ne s'affiche quand vous tapez, c'est normal.
+
+   (Un double-clic sur l'installateur peut aussi fonctionner, mais macOS
+   bloque souvent les fichiers téléchargés. La méthode « bash » évite ce blocage.)
+
+L'installateur s'occupe de tout : Homebrew, exiftool, Python, Ollama, le
+modèle d'IA, le script et l'application avec son icône. Il peut être relancé
+sans risque pour réparer ou mettre à jour.
+
+
+Utilisation
+───────────
+  • Glissez un ou plusieurs dossiers sur l'icône « Indexer photos »
+    (Dock ou dossier Applications), ou double-cliquez dessus pour choisir.
+  • Confirmez : une fenêtre Terminal affiche la progression.
+  • Une notification sonore signale la fin.
+  • Au premier lancement, macOS demande d'autoriser l'application
+    à contrôler Terminal : répondez OK.
+
+Dans Lightroom :
+  • Nouvelles photos : les mots-clés apparaissent dès l'import.
+  • Photos déjà cataloguées : sélectionnez-les, puis
+    Métadonnées > Lire les métadonnées à partir des fichiers.
+
+
+⚠️  Précautions
+───────────────
+  • Le script ÉCRIT dans vos fichiers. Faites-le uniquement sur des photos
+    sauvegardées ailleurs.
+  • Faites d'abord un essai sur un dossier de COPIES, puis vérifiez dans
+    Lightroom avant de lancer sur vos archives.
+  • Évitez d'utiliser un autre outil d'IA local (Open WebUI, Paperless…)
+    pendant l'indexation : ils se partagent la puce graphique et tout ralentit.
+    Vous pouvez faire mettre en pause automatiquement des conteneurs Docker
+    (voir Réglages). Les autres modèles chargés dans Ollama sont déchargés
+    automatiquement au lancement et pendant l'indexation.
+  • Les mots-clés sont proposés par une IA : ils sont fiables dans
+    l'ensemble mais pas infaillibles. Elle ne nomme jamais les personnes
+    et ne devine ni l'époque ni les liens entre les gens.
+
+
+Réglages
+────────
+Fichier ~/photo_indexer/config.sh (à ouvrir avec TextEdit) :
+  MODEL             modèle d'IA utilisé (gemma4:26b ou qwen3-vl:8b-instruct)
+  WORKERS           requêtes simultanées (2 si 64 Go de mémoire ou plus, sinon 1)
+  PAUSE_CONTAINERS  conteneurs Docker à mettre en pause pendant l'indexation
+
+
+Pour les curieux : en ligne de commande
+───────────────────────────────────────
+  cd ~/photo_indexer && source venv/bin/activate
+  python photo_indexer.py /dossier --dry-run --limit 20   # aperçu, n'écrit rien
+  python photo_indexer.py /dossier --reset                # retraiter tout le dossier
+
+
+Désinstallation
+───────────────
+Même méthode que l'installation, avec « Désinstaller Indexer photos.command ».
+Les mots-clés déjà écrits dans les photos restent en place.
