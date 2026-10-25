@@ -11,7 +11,6 @@ L'outil donne le meilleur de lui-même **au fil de l'eau** : on glisse le dossie
 L'outil restera gratuit. S'il vous fait gagner des heures de catalogage, ou si vous avez enfin retrouvé une photo perdue depuis des années, vous pouvez [m'offrir un café sur Ko-fi](https://ko-fi.com/AugustinDetienne). Chaque contribution m'aide à l'améliorer : version anglaise, nouveaux réglages, compatibilité avec de nouveaux modèles.
 
 Merci, et bon catalogage !
-*Augustin*
 
 <p align="center"><a href="https://ko-fi.com/AugustinDetienne"><img src="https://img.shields.io/badge/Soutenir%20le%20projet-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white" alt="Soutenir sur Ko-fi"></a> <img src="https://img.shields.io/badge/licence-GPL--3.0-blue" alt="Licence GPL-3.0"> <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple" alt="macOS Apple Silicon"></p>
 
