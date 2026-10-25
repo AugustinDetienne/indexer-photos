@@ -6,7 +6,7 @@ Je suis photographe. Comme beaucoup d'entre vous, j'ai accumulé des centaines d
 
 J'ai donc construit **Indexer photos**, un outil gratuit et open source pour Mac. Une IA qui tourne **entièrement sur votre ordinateur** regarde chaque photo et écrit des mots-clés en français et une courte description. Ils sont lisibles directement dans Lightroom, Bridge ou Capture One.
 
-L'outil donne le meilleur de lui-même **au fil de l'eau** : on glisse le dossier d'une séance ou d'un reportage sur l'icône, et quelques minutes plus tard les mots-clés sont là. Pour cataloguer d'un coup une très grosse banque d'images, il faut de la patience. Comptez quelques nuits sur un Mac puissant, et plusieurs semaines sur un Mac de 16 Go : à ce rythme-là, mieux vaut avancer par étapes.
+L'outil donne le meilleur de lui-même **au fil de l'eau** : on glisse le dossier d'une séance ou d'un reportage sur l'icône, et quelques minutes à une heure plus tard selon le Mac, les mots-clés sont là. Pour cataloguer d'un coup une très grosse banque d'images, il faut de la patience. Comptez quelques nuits sur un Mac puissant, et plusieurs semaines sur un Mac de 16 Go : à ce rythme-là, mieux vaut avancer par étapes.
 
 L'outil restera gratuit. S'il vous fait gagner des heures de catalogage, ou si vous avez enfin retrouvé une photo perdue depuis des années, vous pouvez [m'offrir un café sur Ko-fi](https://ko-fi.com/AugustinDetienne). Chaque contribution m'aide à l'améliorer : version anglaise, nouveaux réglages, compatibilité avec de nouveaux modèles.
 
