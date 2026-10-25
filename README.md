@@ -2,24 +2,22 @@
 
 <h1 align="center">Indexer photos</h1>
 
-<p align="center">Mots-clés et descriptions en français pour vos photos, générés par une IA qui tourne <b>sur votre Mac</b>.<br>Écrits en IPTC / XMP, lus directement par Lightroom, Bridge et Capture One.</p>
+Je suis photographe. Comme beaucoup d'entre vous, j'ai accumulé des centaines de milliers d'images qu'il est impossible de retrouver faute de mots-clés. Les services en ligne existent, mais ils supposent d'envoyer ses photos sur des serveurs inconnus, et souvent de payer un abonnement.
+
+J'ai donc construit **Indexer photos**, un outil gratuit et open source pour Mac. Une IA qui tourne **entièrement sur votre ordinateur** regarde chaque photo et écrit des mots-clés en français et une courte description. Ils sont lisibles directement dans Lightroom, Bridge ou Capture One.
+
+L'outil donne le meilleur de lui-même **au fil de l'eau** : on glisse le dossier d'une séance ou d'un reportage sur l'icône, et quelques minutes plus tard les mots-clés sont là. Pour cataloguer d'un coup une très grosse banque d'images, il faut de la patience. Comptez quelques nuits sur un Mac puissant, et plusieurs semaines sur un Mac de 16 Go : à ce rythme-là, mieux vaut avancer par étapes.
+
+L'outil restera gratuit. S'il vous fait gagner des heures de catalogage, ou si vous avez enfin retrouvé une photo perdue depuis des années, vous pouvez [m'offrir un café sur Ko-fi](https://ko-fi.com/AugustinDetienne). Chaque contribution m'aide à l'améliorer : version anglaise, nouveaux réglages, compatibilité avec de nouveaux modèles.
+
+Merci, et bon catalogage !
+*Augustin*
 
 <p align="center"><a href="https://ko-fi.com/AugustinDetienne"><img src="https://img.shields.io/badge/Soutenir%20le%20projet-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white" alt="Soutenir sur Ko-fi"></a> <img src="https://img.shields.io/badge/licence-GPL--3.0-blue" alt="Licence GPL-3.0"> <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple" alt="macOS Apple Silicon"></p>
 
 > **English summary** — Free, fully local AI keywording for photographers on macOS (Apple Silicon). A vision model running in [Ollama](https://ollama.com) looks at each image and writes 6–10 **French** keywords plus a one-sentence description into IPTC/XMP metadata (embedded in JPG/TIFF/DNG, `.xmp` sidecars for RAW files). Additive, resumable, no image ever leaves your Mac. One-click installer, drag-and-drop Dock app. GPL-3.0.
 
 ---
-
-## Pourquoi cet outil
-
-Je suis photographe. Comme beaucoup d'entre vous, j'ai accumulé des centaines de milliers d'images qu'il est impossible de retrouver faute de mots-clés. Les services en ligne existent, mais ils supposent d'envoyer ses photos sur des serveurs inconnus, et souvent de payer un abonnement.
-
-J'ai donc construit **Indexer photos**, un outil gratuit et open source pour Mac. Une IA qui tourne **entièrement sur votre ordinateur** regarde chaque photo et écrit des mots-clés en français et une courte description. Ils sont lisibles directement dans Lightroom, Bridge ou Capture One.
-
-L'outil restera gratuit. S'il vous fait gagner des heures de catalogage, ou si vous avez enfin retrouvé une photo perdue depuis des années, vous pouvez [m'offrir un café sur Ko-fi](https://ko-fi.com/AugustinDetienne). Chaque contribution m'aide à l'améliorer : version anglaise, nouveaux réglages, compatibilité avec de nouveaux modèles.
-
-Merci, et bon catalogage !
-*Augustin*
 
 ## Ce que ça fait
 
