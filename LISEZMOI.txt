@@ -22,7 +22,8 @@ Lightroom, Bridge et Capture One les lisent directement.
 
 Configuration requise
 ─────────────────────
-  • Mac Apple Silicon (M1 ou plus récent). Sur Intel : possible mais très lent.
+  • Mac Apple Silicon (M1 ou plus récent) sous macOS 14 Sonoma ou plus récent.
+    Sur Intel : possible mais très lent (pas d'accélération graphique).
   • Connexion internet pendant l'installation.
   • L'installateur choisit le mode selon la mémoire du Mac :
 

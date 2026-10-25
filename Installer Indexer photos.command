@@ -42,6 +42,14 @@ head -c 1 "$SRC/photo_indexer.py" >/dev/null 2>&1 || acces_refuse "$KIT"
 etape "1/7  Vérification du Mac"
 [ "$(uname)" = "Darwin" ] || stop "Cet installateur est réservé à macOS."
 
+# Ollama exige macOS 14 Sonoma ou plus récent
+MACOS_VER="$(sw_vers -productVersion)"
+if [ "${MACOS_VER%%.*}" -lt 14 ]; then
+  stop "macOS $MACOS_VER détecté : il faut macOS 14 Sonoma ou plus récent (exigence d'Ollama).
+  Mets à jour le Mac (Réglages Système > Général > Mise à jour de logiciels), puis relance l'installateur."
+fi
+vert "macOS $MACOS_VER"
+
 if [ "$(uname -m)" != "arm64" ]; then
   jaune "Mac Intel détecté : le modèle tournera très lentement (plusieurs dizaines de secondes par image)."
   oui "Continuer quand même ?" || exit 0

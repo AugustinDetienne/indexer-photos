@@ -12,9 +12,9 @@ L'outil restera gratuit. S'il vous fait gagner des heures de catalogage, ou si v
 
 Merci, et bon catalogage !
 
-<p align="center"><a href="https://ko-fi.com/AugustinDetienne"><img src="https://img.shields.io/badge/Soutenir%20le%20projet-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white" alt="Soutenir sur Ko-fi"></a> <img src="https://img.shields.io/badge/licence-GPL--3.0-blue" alt="Licence GPL-3.0"> <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple" alt="macOS Apple Silicon"></p>
+<p align="center"><a href="https://ko-fi.com/AugustinDetienne"><img src="https://img.shields.io/badge/Soutenir%20le%20projet-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white" alt="Soutenir sur Ko-fi"></a> <img src="https://img.shields.io/badge/licence-GPL--3.0-blue" alt="Licence GPL-3.0"> <img src="https://img.shields.io/badge/macOS%2014%2B-Apple%20Silicon-black?logo=apple" alt="macOS 14+ Apple Silicon"></p>
 
-> **English summary** — Free, fully local AI keywording for photographers on macOS (Apple Silicon). A vision model running in [Ollama](https://ollama.com) looks at each image and writes 6–10 **French** keywords plus a one-sentence description into IPTC/XMP metadata (embedded in JPG/TIFF/DNG, `.xmp` sidecars for RAW files). Additive, resumable, no image ever leaves your Mac. One-click installer, drag-and-drop Dock app. GPL-3.0.
+> **English summary** — Free, fully local AI keywording for photographers on macOS 14+ (Apple Silicon). A vision model running in [Ollama](https://ollama.com) looks at each image and writes 6–10 **French** keywords plus a one-sentence description into IPTC/XMP metadata (embedded in JPG/TIFF/DNG, `.xmp` sidecars for RAW files). Additive, resumable, no image ever leaves your Mac. One-click installer, drag-and-drop Dock app. GPL-3.0.
 
 ---
 
@@ -36,7 +36,7 @@ Merci, et bon catalogage !
 | 16 à 31 Go | léger | `qwen3-vl:8b-instruct` (6 Go) | bonne, quelques erreurs | ~3,5 s (M4 Max) à ~11 s (MacBook Pro M2 Pro 16 Go) |
 | moins de 16 Go | déconseillé | | | |
 
-- Mac **Apple Silicon** (M1 ou plus récent). Sur Intel : possible mais très lent.
+- Mac **Apple Silicon** (M1 ou plus récent) sous **macOS 14 Sonoma ou plus récent** (exigence d'Ollama). Sur Intel : possible mais très lent (pas d'accélération graphique).
 - 30 Go d'espace libre (mode standard) ou 15 Go (mode léger), connexion internet pendant l'installation.
 
 L'installateur choisit le mode automatiquement selon la mémoire.
